@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsDateString, IsEnum, IsString } from "class-validator";
-import { Gender } from "src/common/enum/gender.enum";
+import { Gender } from "../enum/gender.enum";
 
 export class CreateDeveloperDto {
     @ApiProperty({ description: 'Nome do desenvolvedor' })
@@ -15,7 +15,7 @@ export class CreateDeveloperDto {
     @IsString()
     readonly hobby: string;
 
-    @ApiProperty({ description: 'Data de nascimento do desenvolvedor' })
+    @ApiProperty({ description: 'Data de nascimento do desenvolvedor', format: 'date' })
     @IsDateString()
     readonly birth_date: string;
 }

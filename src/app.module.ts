@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DevelopersModule } from './developers/developers.module';
-import { CommonModule } from './common/common.module';
 
 @Module({
   imports: [
@@ -20,7 +19,6 @@ import { CommonModule } from './common/common.module';
     }),
     ConfigModule.forRoot(),
     DevelopersModule,
-    CommonModule,
   ],
 })
 export class AppModule {}

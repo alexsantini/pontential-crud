@@ -15,6 +15,11 @@ $ npm install
 $ npm run start
 ```
 
+# Teste
+```
+$ npm run test
+```
+
 # URL Swagger com todos os endpoints
 ```
 http://localhost:3000/api
